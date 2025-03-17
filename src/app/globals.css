@@ -46,156 +46,80 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-
-  /* Lime theme colors for light mode */
-  --primary: oklch(0.75 0.18 130); /* Lime */
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.92 0.07 130);
-  --secondary-foreground: oklch(0.4 0.15 130);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.9 0.1 130);
-  --accent-foreground: oklch(0.3 0.15 130);
-
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.75 0.18 130); /* Lime ring */
-
-  --chart-1: oklch(0.75 0.18 130); /* Lime */
-  --chart-2: oklch(0.65 0.18 130); /* Darker lime */
-  --chart-3: oklch(0.85 0.18 130); /* Lighter lime */
-  --chart-4: oklch(0.75 0.25 130); /* More saturated lime */
-  --chart-5: oklch(0.75 0.12 130); /* Less saturated lime */
-
+  --background: hsl(75, 100%, 98%);
+  --foreground: hsl(75, 100%, 10%);
+  --card: hsl(75, 100%, 98%);
+  --card-foreground: hsl(75, 100%, 10%);
+  --popover: hsl(75, 100%, 98%);
+  --popover-foreground: hsl(75, 100%, 10%);
+  --primary: hsl(75, 100%, 30%);
+  --primary-foreground: hsl(75, 100%, 98%);
+  --secondary: hsl(75, 80%, 90%);
+  --secondary-foreground: hsl(75, 100%, 30%);
+  --muted: hsl(75, 80%, 90%);
+  --muted-foreground: hsl(75, 60%, 50%);
+  --accent: hsl(75, 80%, 90%);
+  --accent-foreground: hsl(75, 100%, 30%);
+  --destructive: hsl(10, 80%, 50%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(75, 40%, 80%);
+  --input: hsl(75, 40%, 80%);
+  --ring: hsl(75, 50%, 50%);
+  --chart-1: hsl(85, 60%, 60%);
+  --chart-2: hsl(150, 50%, 50%);
+  --chart-3: hsl(200, 50%, 50%);
+  --chart-4: hsl(95, 70%, 50%);
+  --chart-5: hsl(80, 70%, 50%);
   --radius: 0.625rem;
-
-  /* Sidebar with lime theme */
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.75 0.18 130); /* Lime */
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.92 0.07 130);
-  --sidebar-accent-foreground: oklch(0.4 0.15 130);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.75 0.18 130); /* Lime ring */
+  --sidebar: hsl(75, 100%, 95%);
+  --sidebar-foreground: hsl(75, 100%, 10%);
+  --sidebar-primary: hsl(75, 100%, 30%);
+  --sidebar-primary-foreground: hsl(75, 100%, 98%);
+  --sidebar-accent: hsl(75, 80%, 90%);
+  --sidebar-accent-foreground: hsl(75, 100%, 30%);
+  --sidebar-border: hsl(75, 40%, 80%);
+  --sidebar-ring: hsl(75, 50%, 50%);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-
-  /* Lime theme colors for dark mode */
-  --primary: oklch(0.8 0.2 130); /* Brighter lime for dark mode */
-  --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.3 0.1 130);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.35 0.15 130);
-  --accent-foreground: oklch(0.985 0 0);
-
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: hsl(0 0% 98%);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.8 0.2 130); /* Lime ring */
-
-  --chart-1: oklch(0.8 0.2 130); /* Brighter lime */
-  --chart-2: oklch(0.7 0.2 130); /* Darker lime */
-  --chart-3: oklch(0.9 0.2 130); /* Lighter lime */
-  --chart-4: oklch(0.8 0.25 130); /* More saturated lime */
-  --chart-5: oklch(0.8 0.15 130); /* Less saturated lime */
-
-  /* Sidebar with lime theme for dark mode */
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.8 0.2 130); /* Brighter lime */
-  --sidebar-primary-foreground: oklch(0.1 0 0);
-  --sidebar-accent: oklch(0.35 0.15 130);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.8 0.2 130); /* Lime ring */
-}
-
-@layer utilities {
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-
-  .transform-style-3d {
-    transform-style: preserve-3d;
-  }
-
-  .backface-hidden {
-    backface-visibility: hidden;
-  }
-
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-}
-
-@layer components {
-  @keyframes pop-in {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    70% {
-      transform: scale(1.1);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .animate-pop-in {
-    animation: pop-in 0.5s cubic-bezier(0.26, 1.36, 0.44, 0.95) forwards;
-    opacity: 0;
-  }
-
-  /* Modern scrollbar styling */
-  .custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50px;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
+  --background: hsl(75, 100%, 10%);
+  --foreground: hsl(75, 100%, 98%);
+  --card: hsl(75, 100%, 20%);
+  --card-foreground: hsl(75, 100%, 98%);
+  --popover: hsl(75, 100%, 20%);
+  --popover-foreground: hsl(75, 100%, 98%);
+  --primary: hsl(75, 100%, 70%);
+  --primary-foreground: hsl(75, 100%, 20%);
+  --secondary: hsl(75, 80%, 40%);
+  --secondary-foreground: hsl(75, 100%, 98%);
+  --muted: hsl(75, 80%, 40%);
+  --muted-foreground: hsl(75, 60%, 60%);
+  --accent: hsl(75, 80%, 40%);
+  --accent-foreground: hsl(75, 100%, 98%);
+  --destructive: hsl(10, 70%, 50%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsla(75, 100%, 100%, 10%);
+  --input: hsla(75, 100%, 100%, 15%);
+  --ring: hsl(75, 50%, 50%);
+  --chart-1: hsl(85, 60%, 40%);
+  --chart-2: hsl(150, 50%, 50%);
+  --chart-3: hsl(200, 50%, 50%);
+  --chart-4: hsl(95, 70%, 50%);
+  --chart-5: hsl(80, 70%, 50%);
+  --sidebar: hsl(75, 100%, 20%);
+  --sidebar-foreground: hsl(75, 100%, 98%);
+  --sidebar-primary: hsl(85, 60%, 40%);
+  --sidebar-primary-foreground: hsl(75, 100%, 98%);
+  --sidebar-accent: hsl(75, 80%, 40%);
+  --sidebar-accent-foreground: hsl(75, 100%, 98%);
+  --sidebar-border: hsla(75, 100%, 100%, 10%);
+  --sidebar-ring: hsl(75, 50%, 50%);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-
   body {
     @apply bg-background text-foreground;
   }
