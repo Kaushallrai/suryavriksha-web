@@ -64,7 +64,8 @@ export function HeaderNav() {
                   <div
                     className="flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md relative"
                     style={{
-                      backgroundImage: "url(/assets/freshgroceries.jpg)",
+                      backgroundImage:
+                        "url(/assets/products/content/freshgroceries.jpg)",
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
