@@ -37,7 +37,7 @@ export const Header = () => {
     >
       <nav
         data-state={menuState && "active"}
-        className="w-full bg-background/60 backdrop-blur-4xl border-b"
+        className="w-full bg-blur border-b"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1 transition-all duration-300">
           {/* Logo */}
