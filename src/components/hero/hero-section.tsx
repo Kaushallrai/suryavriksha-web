@@ -40,8 +40,7 @@ export default function HeroSection() {
                     key={2}
                     asChild
                     size="lg"
-                    variant="ghost"
-                    className="px-5 text-base text-white border"
+                    className="px-5 text-base  "
                   >
                     <Link href="#intro">
                       <span className="text-nowrap">Explore more</span>
