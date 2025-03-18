@@ -29,15 +29,15 @@ const links = [
     items: [
       {
         title: "Fresh Fruits",
-        href: "/#categories",
+        href: "/category",
       },
       {
         title: "Fresh Vegetables",
-        href: "/#categories",
+        href: "/category",
       },
       {
         title: "Grocery Items",
-        href: "/#categories",
+        href: "/category",
       },
     ],
   },
@@ -58,8 +58,16 @@ const links = [
     group: "Company",
     items: [
       {
-        title: "About",
-        href: "#",
+        title: "About us",
+        href: "/about",
+      },
+      {
+        title: "Media Gallery",
+        href: "/media",
+      },
+      {
+        title: "Our Team",
+        href: "/team",
       },
 
       {

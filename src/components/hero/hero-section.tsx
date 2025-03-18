@@ -42,7 +42,7 @@ export default function HeroSection() {
                     size="lg"
                     className="px-5 text-base  "
                   >
-                    <Link href="#intro">
+                    <Link href="/about">
                       <span className="text-nowrap">Explore more</span>
                     </Link>
                   </Button>

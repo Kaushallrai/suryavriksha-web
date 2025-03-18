@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Import usePathname
 
 import { cn } from "@/lib/utils";
 import {
@@ -14,26 +15,22 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const categoriesCollection: {
-  title: string;
-  href: string;
-  description: string;
-}[] = [
+const categoriesCollection = [
   {
     title: "Fresh Fruits",
-    href: "/#categories",
+    href: "/category#fruits",
     description:
       "A wide selection of fresh, seasonal fruits picked at their peak for flavor and quality.",
   },
   {
     title: "Fresh Vegetables",
-    href: "/#categories",
+    href: "/category#vegetables",
     description:
       "Locally grown, freshly harvested vegetables, ensuring maximum freshness and taste.",
   },
   {
     title: "Grocery Items",
-    href: "/#categories",
+    href: "/category#grocery",
     description:
       "Essential pantry staples, including grains, oils, and spices, sourced with care.",
   },
@@ -52,6 +49,8 @@ const categoriesCollection: {
 ];
 
 export function HeaderNav() {
+  const pathname = usePathname(); // Get the current page route
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -70,13 +69,11 @@ export function HeaderNav() {
                       backgroundPosition: "center",
                     }}
                   >
-                    <div className="absolute inset-0 bg-black opacity-30 rounded-md" />{" "}
-                    {/* This is the overlay */}
+                    <div className="absolute inset-0 bg-black opacity-30 rounded-md" />
                     <div className="relative z-10">
                       <div className="mb-2 mt-4 text-lg font-medium text-white">
                         Explore
-                      </div>{" "}
-                      {/* Adjusted text color to white */}
+                      </div>
                       <p className="text-sm leading-tight text-white">
                         Discover the finest seasonal harvests, premium produce,
                         and organic selections, all chosen for their quality,
@@ -102,6 +99,7 @@ export function HeaderNav() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
         <NavigationMenuItem>
           <NavigationMenuTrigger>Categories collections</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -118,32 +116,34 @@ export function HeaderNav() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem className="sm:block hidden">
-          <Link href="/about" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About us
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem className="sm:block hidden">
-          <Link href="/media-gallery" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Media Gallery
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem className="sm:block hidden">
-          <Link href="/team" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Our Team
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+
+        {/* Static Links with Active State */}
+        {[
+          { title: "About us", href: "/about" },
+          { title: "Media Gallery", href: "/media-gallery" },
+          { title: "Our Team", href: "/team" },
+        ].map((item) => (
+          <NavigationMenuItem key={item.href} className="sm:block hidden">
+            <Link href={item.href} legacyBehavior passHref>
+              <NavigationMenuLink
+                className={cn(
+                  navigationMenuTriggerStyle(),
+                  pathname === item.href
+                    ? "bg-accent text-accent-foreground"
+                    : ""
+                )}
+              >
+                {item.title}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
 }
 
+// List Item Component
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">

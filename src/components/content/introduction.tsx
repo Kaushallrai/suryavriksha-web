@@ -72,7 +72,7 @@ export default function Introduction() {
             size="lg"
             className="h-12 px-4 rounded-full pl-5 pr-3 text-base border-2 text-primary"
           >
-            <Link href="#link">
+            <Link href="/about">
               <span className="text-nowrap">About Us</span>
               <ChevronRight className="ml-1" />
             </Link>
