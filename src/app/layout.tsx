@@ -6,6 +6,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import WhatsAppButton from "@/components/whatsapp/whatsapp-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,12 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <WhatsAppButton
+            phoneOptions={[
+              { label: "Sales Team", phoneNumber: "+977 9851114767" },
+              { label: "Support Team", phoneNumber: "+91 9557237365" },
+            ]}
+          />
           <Footer />
         </ThemeProvider>
       </body>

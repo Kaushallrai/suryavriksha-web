@@ -56,9 +56,12 @@ export default function HeroSection() {
         <section className="relative z-10 pb-16 md:pb-32">
           <div className="group relative m-auto max-w-6xl px-6">
             <div className="flex flex-col items-center md:flex-row">
-              <div className="md:max-w-44 md:border-r md:border-white/20 md:pr-6">
-                <p className="text-end text-md text-white">
-                  Our Trusted Partners
+              <div className="md:max-w-64 md:border-r md:border-white/20 md:pr-6">
+                <p className="text-center font-semibold italic text-2xl text-white whitespace-nowrap">
+                  Our
+                </p>
+                <p className="text-end font-semibold italic text-2xl text-white whitespace-nowrap">
+                  Trusted Partners
                 </p>
               </div>
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
@@ -79,6 +82,15 @@ export default function HeroSection() {
                       src="/assets/partners/2.png"
                       alt="Agrione Nepal"
                       height={20}
+                      width={100}
+                    />
+                  </div>
+                  <div className="flex">
+                    <Image
+                      className="mx-auto w-auto h-20"
+                      src="/assets/partners/3.png"
+                      alt="Agrione Nepal"
+                      height={40}
                       width={100}
                     />
                   </div>

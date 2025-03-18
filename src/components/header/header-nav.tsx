@@ -49,7 +49,7 @@ const categoriesCollection = [
 ];
 
 export function HeaderNav() {
-  const pathname = usePathname(); // Get the current page route
+  const pathname = usePathname();
 
   return (
     <NavigationMenu>

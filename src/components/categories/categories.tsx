@@ -23,7 +23,6 @@ interface Category {
   images: CategoryImage[];
 }
 
-// Category data with headings, descriptions, and images
 const categories: Category[] = [
   {
     id: "fruits",
@@ -72,10 +71,7 @@ const categories: Category[] = [
 // Component for a single category carousel section
 function CategoryCarousel({ category }: { category: Category }) {
   return (
-    <section
-      id={category.id}
-      className="py-12 md:py-20 bg-zinc-100 dark:bg-zinc-900"
-    >
+    <section id={category.id} className="py-12 md:py-20   dark:bg-transparent">
       <div className="mx-auto max-w-4xl space-y-6 text-center md:space-y-8 mb-10">
         <h2 className="text-balance text-3xl font-medium lg:text-4xl">
           {category.title}
@@ -127,7 +123,7 @@ function CategoryCarousel({ category }: { category: Category }) {
 
 export default function Categories() {
   return (
-    <div className="space-y-8 md:space-y-0">
+    <div className="space-y-8 md:space-y-0 py-12">
       {categories.map((category) => (
         <CategoryCarousel key={category.id} category={category} />
       ))}

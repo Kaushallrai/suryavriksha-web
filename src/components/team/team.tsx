@@ -33,12 +33,20 @@ const members = [
     description:
       "Mr. Mangrati, the CMO of the company, has a wide range of experience in marketing. He plays a critical role in driving brand awareness, customer acquisition, and revenue growth by promoting the company's products and services.",
   },
+
   {
     name: "Naren Ayer",
     role: "Customer Service Manager",
     avatar: "/assets/teams/csm.jpeg",
     description:
       "Mr. Ayer ensures customer satisfaction and maintains strong relationships with clients in our company. He plays a role in building trust, resolving issues, and ensuring smooth communication between the company and its customers.",
+  },
+  {
+    name: "Basudev Chandra Malla",
+    role: "Chief Marketing Officer",
+    avatar: "/assets/teams/cmo2.jpg",
+    description:
+      "Mr. Mangrati, the CMO of the company, has more than over 20 years of experience in marketing. He plays a critical role in driving brand awareness, customer acquisition, and revenue growth by promoting the company's products and services.",
   },
   {
     name: "Kaushal Rai",
