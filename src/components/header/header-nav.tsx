@@ -119,9 +119,9 @@ export function HeaderNav() {
 
         {/* Static Links with Active State */}
         {[
-          { title: "About us", href: "/about" },
-          { title: "Media Gallery", href: "/media-gallery" },
           { title: "Our Team", href: "/team" },
+          { title: "About us", href: "/about" },
+          { title: "Media Gallery", href: "/media" },
         ].map((item) => (
           <NavigationMenuItem key={item.href} className="sm:block hidden">
             <Link href={item.href} legacyBehavior passHref>

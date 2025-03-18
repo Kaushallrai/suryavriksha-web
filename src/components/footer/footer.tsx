@@ -89,11 +89,12 @@ export default function Footer() {
             className="flex items-center space-x-2"
           >
             <Image
-              src="/assets/logo/logo1.png"
+              src="/assets/logo/newlogo2.png"
               alt="Logo"
-              width={55}
-              height={55}
+              width={220}
+              height={0}
               priority
+              suppressHydrationWarning
             />
           </Link>
           <div className="flex flex-wrap justify-center gap-6 text-sm">

@@ -22,7 +22,7 @@ const members = [
   {
     name: "Sagar Sharma",
     role: "Chief Finance Officer",
-    avatar: "/assets/teams/cfo.jpg",
+    avatar: "/assets/teams/cfo.jpeg",
     description:
       "Mr. Sharma, a Chartered Accountant by profession with more than 10 years of experience in finance, helps manage financial planning, budgeting, and reporting. He oversees the finance team and also helps with relationships with banks and financial institutions.",
   },
