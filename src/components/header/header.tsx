@@ -47,11 +47,12 @@ export const Header = () => {
             className="flex items-center space-x-2"
           >
             <Image
-              src="/assets/logo/logo.png"
+              src="/assets/logo/logo1.png"
               alt="Logo"
               width={50}
               height={50}
               priority
+              quality={100}
             />
           </Link>
 

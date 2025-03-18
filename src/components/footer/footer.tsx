@@ -50,7 +50,7 @@ const links = [
       },
       {
         title: "Local Favourites",
-        href: "#collection",
+        href: "/#collection",
       },
     ],
   },
@@ -91,8 +91,8 @@ export default function Footer() {
             <Image
               src="/assets/logo/logo1.png"
               alt="Logo"
-              width={50}
-              height={50}
+              width={55}
+              height={55}
               priority
             />
           </Link>

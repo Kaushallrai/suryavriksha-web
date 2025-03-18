@@ -152,7 +152,7 @@ export default function About() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/assets/teams/team.jpeg"
                 alt="Our team at work"
                 fill
                 className="object-cover"
