@@ -46,7 +46,7 @@ const members = [
     role: "Chief Marketing Officer",
     avatar: "/assets/teams/cmo2.jpg",
     description:
-      "Mr. Mangrati, the CMO of the company, has more than over 20 years of experience in marketing. He plays a critical role in driving brand awareness, customer acquisition, and revenue growth by promoting the company's products and services.",
+      "Mr. Malla, the CMO of the company, has more than over 20 years of experience in marketing. He plays a critical role in driving brand awareness, customer acquisition, and revenue growth by promoting the company's products and services.",
   },
   {
     name: "Kaushal Rai",

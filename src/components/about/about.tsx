@@ -134,10 +134,10 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-medium mb-6">Who We Are</h2>
               <p className="mb-6 text-muted-foreground">
-                Established in 2024, SuryaVriksha has grown into a leading
-                player in international trade, ensuring seamless distribution of
-                farm-fresh produce and essential grocery products across various
-                regions.
+                Established our business since 2020, SuryaVriksha has grown into
+                a leading player in international trade, ensuring seamless
+                distribution of farm-fresh produce and essential grocery
+                products across various regions.
               </p>
               <p className="mb-6 text-muted-foreground">
                 Our company is driven by a vision to provide high-quality,

@@ -65,14 +65,33 @@ export default function HeroSection() {
                 </p>
               </div>
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
-                <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
+                <InfiniteSlider speedOnHover={20} speed={40} gap={100}>
                   <div className="flex">
                     <Image
                       className="mx-auto h-20 w-auto"
                       src="/assets/partners/1.png"
                       alt="Shivansh Group"
                       height={20}
-                      width={100} // Ensures proper rendering
+                      width={100}
+                    />
+                  </div>
+                  <div className="flex">
+                    <Image
+                      className="mx-auto h-20 w-auto"
+                      src="/assets/partners/6.png"
+                      alt="Carrefour"
+                      height={20}
+                      width={100}
+                    />
+                  </div>
+
+                  <div className="flex">
+                    <Image
+                      className="mx-auto w-auto h-20"
+                      src="/assets/partners/3.png"
+                      alt="FSBOLING"
+                      height={40}
+                      width={100}
                     />
                   </div>
 
@@ -82,15 +101,6 @@ export default function HeroSection() {
                       src="/assets/partners/2.png"
                       alt="Agrione Nepal"
                       height={20}
-                      width={100}
-                    />
-                  </div>
-                  <div className="flex">
-                    <Image
-                      className="mx-auto w-auto h-20"
-                      src="/assets/partners/3.png"
-                      alt="Agrione Nepal"
-                      height={40}
                       width={100}
                     />
                   </div>
@@ -110,16 +120,6 @@ export default function HeroSection() {
                       className="mx-auto h-20 w-auto"
                       src="/assets/partners/5.png"
                       alt="Sattyam International Services"
-                      height={20}
-                      width={100}
-                    />
-                  </div>
-
-                  <div className="flex">
-                    <Image
-                      className="mx-auto h-20 w-auto"
-                      src="/assets/partners/6.png"
-                      alt="Carrefour"
                       height={20}
                       width={100}
                     />
