@@ -20,6 +20,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SuryaVriksha",
+  icons: {
+    icon: "/assets/logo/favicon.ico",
+  },
 };
 
 export default function RootLayout({

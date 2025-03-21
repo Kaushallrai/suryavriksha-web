@@ -20,6 +20,13 @@ const members = [
       "Mr. Bohora is the COO of the company who oversees daily operations, ensuring efficiency across departments. He looks over the operational activities of the company, including guidance to the procurement team, logistics and supply chain team. He also heads the trading activities, including relationships with traders and market analysis.",
   },
   {
+    name: "Naren Ayer",
+    role: "Customer Service Manager",
+    avatar: "/assets/teams/csm.jpeg",
+    description:
+      "Mr. Ayer ensures customer satisfaction and maintains strong relationships with clients in our company. He plays a role in building trust, resolving issues, and ensuring smooth communication between the company and its customers.",
+  },
+  {
     name: "Sagar Sharma",
     role: "Chief Finance Officer",
     avatar: "/assets/teams/cfo.jpeg",
@@ -34,13 +41,6 @@ const members = [
       "Mr. Mangrati, the CMO of the company, has a wide range of experience in marketing. He plays a critical role in driving brand awareness, customer acquisition, and revenue growth by promoting the company's products and services.",
   },
 
-  {
-    name: "Naren Ayer",
-    role: "Customer Service Manager",
-    avatar: "/assets/teams/csm.jpeg",
-    description:
-      "Mr. Ayer ensures customer satisfaction and maintains strong relationships with clients in our company. He plays a role in building trust, resolving issues, and ensuring smooth communication between the company and its customers.",
-  },
   {
     name: "Basudev Chandra Malla",
     role: "Chief Marketing Officer",
