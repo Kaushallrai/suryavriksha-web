@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import WhatsAppButton from "@/components/whatsapp/whatsapp-button";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +21,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SuryaVriksha",
+  description:
+    "Official website of SuryaVriksha. Providing high-quality services/products.",
+  openGraph: {
+    images: "/newlogo2.png",
+  },
   icons: {
     icon: "/assets/logo/favicon.ico",
   },
@@ -32,6 +38,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Head>
+        <meta name="description" content="Official website of SuryaVriksha." />
+        <meta property="og:image" content="/newlogo2.png" />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "SuryaVriksha",
+            url: "https://suryavriksha.com",
+            logo: "https://suryavriksha.com/newlogo2.png",
+          })}
+        </script>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
