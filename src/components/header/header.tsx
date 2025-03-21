@@ -8,7 +8,11 @@ import React, { useState, useEffect } from "react";
 import { ModeToggle } from "../ui/mode-toggle";
 import { HeaderNav } from "./header-nav";
 
-const menuItems = [{ name: "About", href: "#about" }];
+const menuItems = [
+  { name: "Our Team", href: "/team" },
+  { name: "About us", href: "/about" },
+  { name: "Media Gallery", href: "/media" },
+];
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
