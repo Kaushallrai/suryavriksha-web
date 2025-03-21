@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   description:
     "Official website of SuryaVriksha. Providing high-quality services/products.",
   openGraph: {
-    images: "/newlogo2.png",
+    images: "/favicon.ico",
   },
   icons: {
-    icon: "/assets/logo/favicon.ico",
+    icon: "/favicon.ico",
   },
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <Head>
         <meta name="description" content="Official website of SuryaVriksha." />
-        <meta property="og:image" content="/newlogo2.png" />
+        <meta property="og:image" content="/favicon.ico" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -48,7 +48,7 @@ export default function RootLayout({
             "@type": "Organization",
             name: "SuryaVriksha",
             url: "https://suryavriksha.com",
-            logo: "https://suryavriksha.com/newlogo2.png",
+            logo: "https://suryavriksha.com/favicon.ico",
           })}
         </script>
       </Head>
