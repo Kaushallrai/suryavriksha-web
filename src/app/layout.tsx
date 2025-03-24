@@ -24,10 +24,21 @@ export const metadata: Metadata = {
   description:
     "Official website of SuryaVriksha. Providing high-quality services/products.",
   openGraph: {
-    images: "/favicon.ico",
+    images: [
+      {
+        url: "https://suryavriksha.com/favicon.ico",
+        width: 32,
+        height: 32,
+      },
+    ],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
