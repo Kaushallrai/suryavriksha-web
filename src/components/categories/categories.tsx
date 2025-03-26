@@ -30,12 +30,16 @@ const categories: Category[] = [
     description:
       "Experience the finest selection of fresh, handpicked fruits, sourced from the best farms to ensure exceptional taste and quality. Whether you're looking for a juicy snack, a refreshing smoothie ingredient, or a vibrant addition to your meals, our fruits are packed with natural sweetness, essential vitamins, and rich flavors to elevate your daily nutrition.",
     images: [
-      { src: "/placeholder.svg?height=400&width=600", alt: "Apple" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Banana" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Orange" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Strawberry" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Mango" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Grapes" },
+      { src: "/assets/fv/fruits/apple.jpeg", alt: "Apple" },
+      { src: "/assets/fv/fruits/banana.jpeg", alt: "Banana" },
+      { src: "/assets/fv/fruits/bberry.jpeg", alt: "blueberry" },
+      { src: "/assets/fv/fruits/sb.jpeg", alt: "Strawberry" },
+      { src: "/assets/fv/fruits/mango.jpeg", alt: "Mango" },
+      { src: "/assets/fv/fruits/10.jpeg", alt: "10" },
+      { src: "/assets/fv/fruits/orange.jpeg", alt: "Orange" },
+      { src: "/assets/fv/fruits/pomo.jpeg", alt: "Pomo" },
+      { src: "/assets/fv/fruits/papaya.jpeg", alt: "Papaya" },
+      { src: "/assets/fv/fruits/kiwi.jpeg", alt: "Kiwi" },
     ],
   },
   {
@@ -44,28 +48,37 @@ const categories: Category[] = [
     description:
       "Discover a diverse range of farm-fresh vegetables, harvested at peak ripeness to preserve their crisp texture, vibrant color, and full-bodied flavor. Whether you're preparing a hearty home-cooked meal, a nutritious salad, or a flavorful stir-fry, our vegetables provide the perfect foundation for a wholesome and delicious dining experience.",
     images: [
-      { src: "/placeholder.svg?height=400&width=600", alt: "Tomato" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Carrot" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Broccoli" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Spinach" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Bell Pepper" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Cucumber" },
+      { src: "/assets/fv/vegetables/brocolli.jpeg", alt: "brocolli" },
+      { src: "/assets/fv/vegetables/carrot.jpeg", alt: "carrot" },
+      { src: "/assets/fv/vegetables/cucumber.jpeg", alt: "cucumber" },
+      { src: "/assets/fv/vegetables/tomato.jpeg", alt: "tomato" },
+      { src: "/assets/fv/vegetables/pea.jpeg", alt: "pea" },
+      { src: "/assets/fv/vegetables/potato.jpeg", alt: "potato" },
+      { src: "/assets/fv/vegetables/pumpkin.jpeg", alt: "pumpkin" },
+      { src: "/assets/fv/vegetables/radish.jpeg", alt: "radish" },
+      { src: "/assets/fv/vegetables/1.jpeg", alt: "1" },
+      { src: "/assets/fv/vegetables/2.jpeg", alt: "2" },
+      { src: "/assets/fv/vegetables/3.jpeg", alt: "3" },
+      { src: "/assets/fv/vegetables/4.jpeg", alt: "4" },
+      { src: "/assets/fv/vegetables/5.jpeg", alt: "5" },
+      { src: "/assets/fv/vegetables/6.jpeg", alt: "6" },
+      { src: "/assets/fv/vegetables/7.jpeg", alt: "7" },
     ],
   },
-  {
-    id: "grocery",
-    title: "Grocery Items",
-    description:
-      "Stock up on all your pantry essentials with our carefully curated selection of high-quality grocery items. From premium grains and pulses to rich spices, cooking oils, and daily necessities, we bring you everything you need to create delicious and nutritious meals. Our grocery selection ensures convenience, freshness, and superior quality for your kitchen.",
-    images: [
-      { src: "/placeholder.svg?height=400&width=600", alt: "Rice" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Pasta" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Flour" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Spices" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Oil" },
-      { src: "/placeholder.svg?height=400&width=600", alt: "Canned Goods" },
-    ],
-  },
+  // {
+  //   id: "grocery",
+  //   title: "Grocery Items",
+  //   description:
+  //     "Stock up on all your pantry essentials with our carefully curated selection of high-quality grocery items. From premium grains and pulses to rich spices, cooking oils, and daily necessities, we bring you everything you need to create delicious and nutritious meals. Our grocery selection ensures convenience, freshness, and superior quality for your kitchen.",
+  //   images: [
+  //     { src: "/placeholder.svg?height=400&width=600", alt: "Rice" },
+  //     { src: "/placeholder.svg?height=400&width=600", alt: "Pasta" },
+  //     { src: "/placeholder.svg?height=400&width=600", alt: "Flour" },
+  //     { src: "/placeholder.svg?height=400&width=600", alt: "Spices" },
+  //     { src: "/placeholder.svg?height=400&width=600", alt: "Oil" },
+  //     { src: "/placeholder.svg?height=400&width=600", alt: "Canned Goods" },
+  //   ],
+  // },
 ];
 
 // Component for a single category carousel section
@@ -95,14 +108,14 @@ function CategoryCarousel({ category }: { category: Category }) {
                   key={index}
                   className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3"
                 >
-                  <Card className="overflow-hidden">
+                  <Card className="overflow-hidden p-0">
                     <CardContent className="p-0">
                       <div className="relative aspect-square">
                         <Image
                           src={image.src || "/placeholder.svg"}
                           alt={image.alt}
                           fill
-                          className="object-cover transition-all hover:scale-105 duration-300"
+                          className="object-cover fill transition-all hover:scale-105 duration-300"
                           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                         />
                       </div>

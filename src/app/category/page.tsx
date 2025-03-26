@@ -2,7 +2,7 @@
 
 import Categories from "@/components/categories/categories";
 
-export default function Team() {
+export default function CategoriesPage() {
   return (
     <>
       <Categories />
