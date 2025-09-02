@@ -68,8 +68,8 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {menuState && (
-          <div className="fixed inset-0 top-16 z-40 w-full h-screen bg-background/95 backdrop-blur-sm lg:hidden pt-safe-area-inset-top">
-            <div className="flex flex-col h-full">
+          <div className="absolute top-full left-0 right-0 z-40 w-full bg-background/95 backdrop-blur-sm lg:hidden shadow-xl border-t">
+            <div className="flex flex-col">
               <ul className="flex flex-col items-center space-y-6 py-8 px-6">
                 {menuItems.map((item, index) => (
                   <li key={index} className="w-full">
@@ -83,7 +83,7 @@ export const Header = () => {
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-col items-center space-y-4 pb-8 mt-auto">
+              <div className="flex flex-col items-center space-y-4 pb-8">
                 <Button asChild size="lg" className="w-48">
                   <Link href="/#contact" onClick={handleLinkClick}>
                     Contact
