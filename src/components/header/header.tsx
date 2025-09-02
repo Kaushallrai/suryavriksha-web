@@ -22,10 +22,10 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed z-20 w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-safe-area-inset-top">
       <nav
         data-state={menuState && "active"}
-        className="w-full bg-blur border-b"
+        className="w-full bg-blur border-b backdrop-blur-md"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1 transition-all duration-300">
           {/* Logo */}
@@ -60,46 +60,37 @@ export const Header = () => {
           <button
             onClick={() => setMenuState(!menuState)}
             aria-label={menuState ? "Close Menu" : "Open Menu"}
-            className="relative z-20 -m-2.5 p-2.5 lg:hidden"
+            className="relative z-20 -m-2.5 p-2.5 lg:hidden transition-all duration-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
           >
-            <span className="relative block size-6">
-              <X
-                className={`absolute inset-0 transition-all duration-500 ${
-                  menuState ? "opacity-100 scale-100" : "opacity-0 scale-75"
-                }`}
-              />
-              <Menu
-                className={`absolute inset-0 transition-all duration-500 ${
-                  menuState ? "opacity-0 scale-75" : "opacity-100 scale-100"
-                }`}
-              />
-            </span>
+            {menuState ? <X className="size-6" /> : <Menu className="size-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {menuState && (
-          <div className="absolute top-16 left-0 w-full bg-background shadow-xl lg:hidden ">
-            <ul className="flex flex-col items-center space-y-6 py-6">
-              {menuItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className="text-muted-foreground transition duration-150 hover:text-accent-foreground"
-                    onClick={handleLinkClick}
-                  >
-                    {item.name}
+          <div className="fixed inset-0 top-16 z-40 w-full h-screen bg-background/95 backdrop-blur-sm lg:hidden pt-safe-area-inset-top">
+            <div className="flex flex-col h-full">
+              <ul className="flex flex-col items-center space-y-6 py-8 px-6">
+                {menuItems.map((item, index) => (
+                  <li key={index} className="w-full">
+                    <Link
+                      href={item.href}
+                      className="block w-full text-center text-lg text-muted-foreground transition duration-200 hover:text-accent-foreground py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+                      onClick={handleLinkClick}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col items-center space-y-4 pb-8 mt-auto">
+                <Button asChild size="lg" className="w-48">
+                  <Link href="/#contact" onClick={handleLinkClick}>
+                    Contact
                   </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="flex flex-col items-center space-y-3 pb-6">
-              <Button asChild size="sm">
-                <Link href="/#contact" onClick={handleLinkClick}>
-                  Contact
-                </Link>
-              </Button>
-              <ModeToggle />
+                </Button>
+                <ModeToggle />
+              </div>
             </div>
           </div>
         )}
