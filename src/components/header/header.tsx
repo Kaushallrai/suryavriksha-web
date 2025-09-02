@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { ModeToggle } from "../ui/mode-toggle";
 import { HeaderNav } from "./header-nav";
@@ -16,29 +16,13 @@ const menuItems = [
 
 export const Header = () => {
   const [menuState, setMenuState] = useState(false);
-  const [scrollingUp, setScrollingUp] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setScrollingUp(true);
-      } else {
-        setScrollingUp(false);
-      }
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const handleLinkClick = () => {
+    setMenuState(false);
+  };
 
   return (
-    <header
-      className={`fixed z-20 w-full transition-transform duration-200 ${
-        scrollingUp ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <header className="fixed z-20 w-full">
       <nav
         data-state={menuState && "active"}
         className="w-full bg-blur border-b"
@@ -78,19 +62,31 @@ export const Header = () => {
             aria-label={menuState ? "Close Menu" : "Open Menu"}
             className="relative z-20 -m-2.5 p-2.5 lg:hidden"
           >
-            {menuState ? <X className="size-6" /> : <Menu className="size-6" />}
+            <span className="relative block size-6">
+              <X
+                className={`absolute inset-0 transition-all duration-500 ${
+                  menuState ? "opacity-100 scale-100" : "opacity-0 scale-75"
+                }`}
+              />
+              <Menu
+                className={`absolute inset-0 transition-all duration-500 ${
+                  menuState ? "opacity-0 scale-75" : "opacity-100 scale-100"
+                }`}
+              />
+            </span>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {menuState && (
-          <div className="absolute top-16 left-0 w-full bg-background shadow-xl lg:hidden">
+          <div className="absolute top-16 left-0 w-full bg-background shadow-xl lg:hidden ">
             <ul className="flex flex-col items-center space-y-6 py-6">
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
                     href={item.href}
                     className="text-muted-foreground transition duration-150 hover:text-accent-foreground"
+                    onClick={handleLinkClick}
                   >
                     {item.name}
                   </Link>
@@ -99,7 +95,9 @@ export const Header = () => {
             </ul>
             <div className="flex flex-col items-center space-y-3 pb-6">
               <Button asChild size="sm">
-                <Link href="/#contact">Contact</Link>
+                <Link href="/#contact" onClick={handleLinkClick}>
+                  Contact
+                </Link>
               </Button>
               <ModeToggle />
             </div>

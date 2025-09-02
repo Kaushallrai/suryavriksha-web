@@ -20,6 +20,7 @@ import {
   PackageCheck,
   Box,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function About() {
   // Product offerings
@@ -417,7 +418,7 @@ export default function About() {
               every shipment.
             </p>
             <Button size="lg" className="mt-4 p-4">
-              Contact Us Today
+              <Link href="/#contact"> Contact Us Today</Link>
             </Button>
           </div>
         </div>
